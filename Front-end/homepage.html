@@ -1,0 +1,275 @@
+<!doctype html>
+        <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+        <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+        <!--[if IE 8]>    <html class="lt-ie9" lang="en-US"> <![endif]-->
+        <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+        <head>
+                <!-- META TAGS -->
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title>STUDY BUDDY</title>
+                <script></script>
+                
+				
+                <link rel="shortcut icon" href="images/favicon.png" />
+
+                <!-- Style Sheet-->
+                <link rel="stylesheet" href="style.css"/>
+                <link rel='stylesheet' id='bootstrap-css-css'  href='css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='responsive-css-css'  href='css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
+                <link rel='stylesheet' id='main-css-css'  href='css/main5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='custom-css-css'  href='css/custom5152.html?ver=1.0' type='text/css' media='all' />
+
+
+                <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+                <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+                <![endif]-->
+                
+                <script type="text/javascript">
+                	var url=location.href; 
+					var tmp1=url.split("?")[1]; 
+					var tmp2=tmp1.split("&")[0]; 
+					var tmp3=tmp1.split("&")[1]; 
+					var userName=tmp2.split("=")[1]; 
+					var password = tmp3.split("=")[1]; 
+                </script>
+
+        </head>
+
+        <body>
+
+                <!-- Start of Header -->
+                <div class="header-wrapper">
+                        <header>
+                  <div class="container">
+
+
+                                  <div class="logo-container">
+                            <span class="tag-line">Welcome to Study Buddy</span>
+        </div>
+
+
+                                        <!-- Start of Main Navigation -->
+                                        <nav class="main-nav">
+                                                <div class="menu-top-menu-container">
+                                                        <ul id="menu-top-menu" class="clearfix">
+                                                                <li class="current-menu-item"><a href="homepage.html">Home</a></li>
+
+                                                          <li><a href="login.html">Sign Out</a></li>
+                                                        </ul>
+                                                </div>
+                                        </nav>
+                                        <!-- End of Main Navigation -->
+
+                                </div>
+                <!-- End of Header -->
+
+                <!-- Start of Search Wrapper -->
+                <div class="search-area-wrapper">
+                        <div class="search-area container">
+                                <h3 class="search-header" >STUDY BUDDY</h3>
+                                <p class="search-tag-line">Find the topic you would like to learn!</p>
+
+                                <form id="search-form" class="search-form clearfix" method="get" action="#" autocomplete="off">
+                      <input type="text" class="search-term required" id="query_input" title="* Please enter a search term!" placeholder="Type your search terms here">
+    <input class="search-btn" type="button" onclick="search()" value="Search" id="Search_id" />
+                                        <div id="search-error-container"></div>
+                                </form>
+                        </div>
+                </div>
+                <!-- End of Search Wrapper -->
+
+
+                <!-- Start of Page Container -->
+                <div class="page-container">
+                        <div class="container">
+                                <div class="row">
+
+                                        <!-- start of page content -->
+                                        <div class="span9 page-content">
+
+                                                <!-- Basic Home Page Template -->
+                                                <div class="row separator" id="results">
+                                                </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- end of page content -->
+
+
+                                        <!-- start of sidebar -->
+                                        <aside class="span3 page-sidebar">
+
+                                                <section class="widget">
+                                                        <div class="support-widget">
+                                                                <h5 class="title">Find Study Buddies</h5>
+                                                                <div id = "recommendedUsers"></div>
+                                                        </div>
+                                                </section>
+
+                                        </aside>
+                                        <!-- end of sidebar -->
+                                </div>
+                        </div>
+                </div>
+                <!-- End of Page Container -->
+
+                <!-- Start of Footer -->
+                <footer id="footer-wrapper">
+                        <div id="footer" class="container">
+                                <div class="row">
+
+                                  <div class="span3">
+                                                <section class="widget">
+                                                        <h3 class="title">How it works</h3>
+                                                        <div class="textwidget">                                                     
+                                                                <p> This website is used in course Bigdata analytics, after login in, just type search key in search box and them press the buttom search, the search results will be returned and study parteners with same similarity will be </p>
+                                                        </div>
+                                                </section>
+                                        </div>
+
+                                        <div class="span3">
+                                                <section class="widget"><h3 class="title">Who Are We</h3>
+                                                        <ul>
+                                                                <li><a href="https://www.linkedin.com/in/bryangh" title="Lorem ipsum dolor sit amet,">Huan Gao</a> </li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Yifan Yang</a></li>
+                                                                <li><a href="https://www.linkedin.com/in/louisyuanhui" title="Lorem ipsum dolor sit amet,">Yuanhui Luo</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Zidong Gao</a></li>
+                                                                
+                                                        </ul>
+                                                </section>
+                                        </div>
+
+                                        
+
+                                        <div class="span3">
+
+                                        </div>
+
+                                </div>
+                  </div>
+                        <!-- end of #footer -->
+
+                        <!-- Footer Bottom -->
+                        
+                        <!-- End of Footer Bottom -->
+
+                </footer>
+                <!-- End of Footer -->
+
+		<script>
+		function search() {
+			$( "#Search_id" ).click('click', function() {
+				console.log("start to post");
+				$.post("http://localhost:8080/ERP/user/search",
+				{
+					
+					userName:userName,
+					pwd:password,
+					query:document.getElementById("query_input").value
+				},
+			
+					function update(data, status) {
+						console.log("==================================");
+						var selector = $("#results");
+						var recommendedUsersSelector = $("#recommendedUsers");
+	
+						//console.log(data.searchResults);
+						console.log(data.recommendedUsers);
+						var buddyName = new Array(data.recommendedUsers.length);
+						for (var i = 0; i < data.recommendedUsers.length; i++) {
+								buddyName[i] = data.recommendedUsers[i].userName;
+							}
+						var jsonData = JSON.parse(data.searchResults);
+						
+						linksText=new Array(jsonData.GeneralDescription.length);
+						snippetsText=new Array(jsonData.GeneralDescription.length);
+						titlesText=new Array(jsonData.GeneralDescription.length);
+						for (var i = 0; i < jsonData.GeneralDescription.length; i++) {
+							//var counter = jsonData.GeneralDescription[i];
+							linksText[i] = jsonData.GeneralDescription[i].link;
+							snippetsText[i] = jsonData.GeneralDescription[i].snippet;
+							titlesText[i] = jsonData.GeneralDescription[i].title;
+						}
+								
+						linksOnlineVideoCourse=new Array(jsonData.OnlineVideoCourse.length);
+						snippetsOnlineVideoCourse=new Array(jsonData.OnlineVideoCourse.length);
+						titlesOnlineVideoCourse=new Array(jsonData.OnlineVideoCourse.length);
+						for (var i = 0; i < jsonData.OnlineVideoCourse.length; i++) {
+							//var counter = jsonData.OnlineVideoCourse[i];
+							linksOnlineVideoCourse[i] = jsonData.OnlineVideoCourse[i].link;
+							snippetsOnlineVideoCourse[i] = jsonData.OnlineVideoCourse[i].snippet;
+							titlesOnlineVideoCourse[i] = jsonData.OnlineVideoCourse[i].title;
+						}				
+						
+						linksProfession=new Array(jsonData.ProfessionalInstruction.length);
+						snippetsProfession=new Array(jsonData.ProfessionalInstruction.length);
+						titlesProfession=new Array(jsonData.ProfessionalInstruction.length);
+						for (var i = 0; i < jsonData.ProfessionalInstruction.length; i++) {
+							//var counter = jsonData.ProfessionalInstruction[i];
+							linksProfession[i] = jsonData.ProfessionalInstruction[i].link;
+							snippetsProfession[i] = jsonData.ProfessionalInstruction[i].snippet;
+							titlesProfession[i] = jsonData.ProfessionalInstruction[i].title;
+						}
+			
+						var resultContent = "<section class=\"span3 articles-list\">\n<h3>General Description</h3>\n<ul class=\"articles\">\n";
+						
+						for (var i = 0; i < jsonData.GeneralDescription.length; i++) {
+							
+					
+							resultContent = resultContent + "<li class=\"article-entry standard\">\n";
+							resultContent = resultContent + "<h4><a href=\"" + linksText[i] + "\">"+ titlesText[i] +"</a></h4>\n";
+							resultContent = resultContent + "<span class=\"article-meta\">" + snippetsText[i] + "</span>\n</li>";
+						}
+			
+						resultContent = resultContent + "</ul>\n</section>\n<section class=\"span3 articles-list\">\n<h3>Online/Video Course</h3>\n<ul class=\"articles\">\n";					
+						
+						for (var i = 0; i < jsonData.OnlineVideoCourse.length; i++) {
+							resultContent = resultContent + "<li class=\"article-entry standard\">\n";
+							resultContent = resultContent + "<h4><a href=\"" + linksOnlineVideoCourse[i] + "\">"+ titlesOnlineVideoCourse[i] +"</a></h4>";
+							resultContent = resultContent + "<span class=\"article-meta\">" + snippetsOnlineVideoCourse[i] + "</span>\n</li>\n";
+							selector.append("</li>");
+						}
+						
+						resultContent = resultContent + "</ul>\n</section>\n<section class=\"span3 articles-list\">\n<h3>Professional Instruction</h3>\n<ul class=\"articles\">\n";
+						
+						
+						for (var i = 0; i < jsonData.ProfessionalInstruction.length; i++) {
+							resultContent = resultContent + "<li class=\"article-entry standard\">\n";
+							resultContent = resultContent + "<h4><a href=\"" + linksProfession[i] + "\">"+ titlesProfession[i] +"</a></h4>";
+							resultContent = resultContent + "<span class=\"article-meta\">" + snippetsProfession[i] + "</span>\n</li>\n";
+							selector.append("</li>");
+						}
+						resultContent = resultContent + "</ul>\n</section>\n";
+						selector.empty();
+						selector.append(resultContent);
+								
+						var recommendedUsersContent = "";
+						recommendedUsersContent = recommendedUsersContent + "<table>";
+						for (var i = 0; i < buddyName.length; i++) {
+							if (buddyName[i] != "null")
+						recommendedUsersContent = recommendedUsersContent + "<tr><td>" + buddyName[i] + "</td></tr>";
+						
+						}
+						recommendedUsersContent = recommendedUsersContent + "</table>"
+						
+						recommendedUsersSelector.empty();
+						recommendedUsersSelector.append(recommendedUsersContent);
+					}
+				);
+			});
+		}
+		</script>
+                <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
+                <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+                <script type='text/javascript' src='js/prettyphoto/jquery.prettyPhoto.js'></script>
+                <script type='text/javascript' src='js/jflickrfeed.js'></script>
+                <script type='text/javascript' src='js/jquery.form.js'></script>
+                <script type='text/javascript' src='js/jquery.validate.min.js'></script>
+                <script type='text/javascript' src='js/custom.js'></script>
+
+        </body>
+</html>
