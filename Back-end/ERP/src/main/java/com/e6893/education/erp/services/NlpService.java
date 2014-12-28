@@ -17,8 +17,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
-import com.e6893.education.erp.entity.Topic;
-
 import opennlp.tools.cmdline.parser.ParserTool;
 import opennlp.tools.parser.Parse;
 import opennlp.tools.parser.Parser;
@@ -33,9 +31,10 @@ public class NlpService {
 	@Autowired
 	ServletContext servletContext;
 	
-	public List<Topic> getTopics(String searchSentence) {
+	public List<String> getTopics(String searchSentence) {
 		InputStream modelInParse = null;
 		try {
+			List<String> list = new ArrayList<String>();
 			File modelDir = new File( servletContext.getRealPath("/WEB-INF/config/en-parser-chunking.bin") );
 			modelInParse = new FileInputStream(modelDir); //from http://opennlp.sourceforge.net/models-1.5/
 			ParserModel model = new ParserModel(modelInParse);
@@ -51,14 +50,8 @@ public class NlpService {
 			if (nounPhrases.isEmpty())
 				nounPhrases.add(searchSentence);
 			
-			List<Topic> topics = new ArrayList<Topic>();
-			for (String topicName : nounPhrases) {
-				Topic topic = new Topic();
-				topic.setTopicName(topicName);
-				topics.add(topic);
-			}
-			
-			return topics;
+			list.addAll(nounPhrases);
+			return list;
 			
 		}
 		catch (IOException e) {
@@ -86,10 +79,6 @@ public class NlpService {
 	    for (Parse child : p.getChildren())
 	         getNounPhrases(child);
 	}
-
-	
-
-
 
 	
 }

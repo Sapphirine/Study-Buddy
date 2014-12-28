@@ -11,7 +11,7 @@ public class SearchResultPackage {
 	public String SearchResultInString;
 	public SearchResult SearchResultInJavaClass;
 	
-	public SearchResultPackage(String str) {
+	SearchResultPackage(String str) {
 		SearchResultInString = str;
 		SearchResultInJavaClass = new SearchResult(str);
 	}
@@ -21,7 +21,7 @@ public class SearchResultPackage {
 		public String searchTerms;
 		public ArrayList<SearchItem> items;
 		
-		public SearchResult(String str) {
+		SearchResult(String str) {
 			JSONObject obj = new JSONObject(str);
 			JSONObject queries = (JSONObject)obj.get("queries");
 			JSONObject requst = (JSONObject)((JSONArray)queries.get("request")).get(0);

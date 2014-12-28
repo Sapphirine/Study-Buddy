@@ -52,7 +52,6 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public User createUser(User user) {
-		// TODO Auto-generated method stub
 		
 		GraphDatabaseService db = DatabaseNeo4j.getDatabase();
 		
@@ -60,7 +59,7 @@ public class UserDaoImpl implements UserDao {
 
 		try ( Transaction tx = db.beginTx(); )
         {
-           
+            //engine.execute( "match (n) where n.userName = \"" + user.getUserName() + "\" set n.pwd = \"" + user.getPwd() + "\"");
             engine.execute("merge (me: User {userName:'" + user.getUserName() + "', pwd:'" + user.getPwd() + "'})"
             		+ " return me");
             tx.success();   
@@ -266,26 +265,4 @@ public class UserDaoImpl implements UserDao {
 			db.shutdown();
 		}
 	}
-	
-	public void main(String[] args) {
-		User user = new User();
-		user.setUserName("Sheldon");
-		user.setPwd("S");
-		
-		Topic topic = new Topic();
-		topic.setTopicName("calculus");
-		
-		List<User> users = recommendUser(user, topic);
-		List<Topic> topics = recommendTopic(topic);
-		for (User u: users) {
-			System.out.println(u.toString());
-		}
-		System.out.println("========================================================");
-		for (Topic t: topics) {
-			System.out.println(t);
-		}
-	}
-	
-	
-	
 }
