@@ -26,7 +26,7 @@
 
 		<!-- Spring -->
 		<!-- <spring-framework.version>3.2.3.RELEASE</spring-framework.version>  -->
-		<spring-framework.version>4.0.8.RELEASE</spring-framework.version>
+		<spring-framework.version>5.2.20.RELEASE</spring-framework.version>
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
 
@@ -142,7 +142,7 @@
 		</dependency>
 		
 		<dependency><!-- spring mvc -->
-            <groupId>org.springframework</groupId><artifactId>spring-webmvc</artifactId><version>4.0.8.RELEASE</version>
+            <groupId>org.springframework</groupId><artifactId>spring-webmvc</artifactId><version>5.2.20.RELEASE</version>
         </dependency>
         <!-- <dependency>--><!-- jackson -->
 <!--           <groupId>org.codehaus.jackson</groupId><artifactId>jackson-mapper-asl</artifactId><version>1.4.2</version>
